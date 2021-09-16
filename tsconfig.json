@@ -2,6 +2,6 @@
   "extends": "@tsconfig/node14/tsconfig.json",
   "compilerOptions": {
     "baseUrl": "src",
-    "outDir": "dist"
+    "outDir": "bin"
   }
 }
