@@ -6,12 +6,7 @@ Set recursive = true, to process the input directory recursively.
 
 ## Usage
 
-```processDir(inDir: string, outDir: string, recursive: boolean = false)```
-
-### for example 
-```
-processDir("site/src", "site/out")
-```
+consider **example files**:
 
 `site/src:`
 ```
@@ -32,7 +27,7 @@ navbar.html:
  <nav>...</nav>
 ```
 
-### results in
+running the script **results in**:
 
 `site/out:`
 ```
@@ -44,5 +39,21 @@ index.html:
 <header>
     <nav>...</nav>
 </header>
+```
+
+### npm script
+
+```
+  "scripts": {
+    "build": "fragments site/src site/out",
+  },
+```
+
+### programmatically
+
+```
+import {HtmlFragments} from "./HtmlFragments";
+
+new HtmlFragments().processDir('site/src', 'site/out')
 ```
 
